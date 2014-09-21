@@ -1,0 +1,211 @@
+@import "reset.css";
+
+// Colors
+@primary: #ef7752;		//orange
+@secondary: #f1eee5;  	//clear 
+@tiertary: #d6b764;
+
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	// background-color: @primary;
+}
+
+a {
+	color: #000;
+}
+
+.split {
+	height: 5px;
+	margin: 20px 10px;
+	// background-image: url("../images/stripe.png");
+}
+
+.main {
+	padding-top: 30px;
+	margin: auto;
+	margin-top: 10px;
+	width: 100%;
+	max-width: 650px	;
+	// background-color: @secondary;
+	// box-shadow: 8px 8px 8px #bc5f40;
+	header {
+		text-align: center;
+		margin-bottom: 10px;
+		position: relative;
+		.session {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			a {
+				font-size: 0.8em;
+			}
+		}
+	}
+	 h1 {
+	 	text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+		text-transform: uppercase;
+		font-size: 2em;
+	}
+}
+
+
+.new-todo {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+// form stuff
+input, select {
+	vertical-align: top;
+	padding: 16px;
+	border: none;
+	background: transparent;
+	margin: 0;
+	// background: rgba(0, 0, 0, 0.02);
+}
+.title {
+	max-width: 230px;
+	width: 35%;
+	box-shadow: none;
+}
+.importance {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	background-image: url("../images/importance.png"); 
+	cursor: pointer;
+}
+.importance.small {
+	width: 25px;
+	height: 25px;
+	background-image: url("../images/importance-small.png"); 
+}
+.importance[data-value=normal] {
+	background-position: 0 0;
+}
+.importance[data-value=relevant] {
+	background-position: 0 50%;
+}
+.importance[data-value=urgent] {
+	background-position: 0 100%;
+}
+.add {
+	font-size: 36px;
+	font-weight: bold;
+	color: @primary;
+	padding: 3px 16px;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0);
+
+}
+.add:hover {
+	background: rgba(0, 0, 0, 0.02);
+
+}
+
+.todos {
+	margin: 0 10px;
+	overflow: auto;
+	.todo {
+		margin-bottom: 10px;
+		height: 50px;
+		border-bottom: 1px solid #ccc;
+		// background: rgba(0, 0, 0, 0.02);
+	}
+	.todo h3 {
+		display: inline;
+		vertical-align: middle;
+		&.hidden {
+			display: none;
+		}
+	}
+	.todo .toggle {
+		vertical-align: middle;
+		text-align: center;
+		width: 50px;
+		height: 50px;
+		padding: 0;
+		margin: 0;
+		border: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+	}
+	.todo .toggle:after {
+		content: '✔';
+		vertical-align: middle;
+		line-height: 50px;
+		font-size: 28px;
+		color: #d9d9d9;
+		text-shadow: 0 -1px 0 #bfbfbf;
+	}
+	.todo .toggle:checked:after {
+		color: #0ed438;
+		text-shadow: 0 1px 0 #669991;
+	}
+
+	.todo .importance {
+		vertical-align: middle;
+	}
+
+	.todo .duedate {
+		float: right;
+	}
+	.todo .remove {
+		cursor: pointer;
+		margin: 12.5px;
+		background-repeat: no-repeat;
+		width: 25px;
+		height: 25px;
+		display: inline;
+		vertical-align: middle;
+		float: right;
+		background-image: url("../images/remove.png"); 
+	}
+}
+
+.sort {
+	text-align: center;
+	font-size: 12px;
+	color: @tiertary;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	a {
+		color: #666;
+		text-decoration: none;
+	}
+}
+
+.session-form {
+	text-align: center;
+	padding-bottom: 20px;
+	label {
+		text-align: right;
+		display: inline-block;
+		min-width: 140px;
+		vertical-align: middle;
+	}
+	input {
+		vertical-align: middle;
+		background-color: #eee;
+		margin: 2px;
+	}
+	input[type=submit] {
+		color: #fff;
+		background-color: #3dc427;
+		padding: 10px 16px;
+		font-weight: bold;
+		cursor: pointer;
+		margin-left: 75px;
+	}
+	a {
+		vertical-align: middle;
+		font-size: 14px;
+		font-style: italic;
+	}
+}

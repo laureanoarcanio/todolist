@@ -1,0 +1,17 @@
+<input class="toggle" type="checkbox" {{#todo.done}}checked{{/todo.done}}/>
+<div class="importance small" data-value="{{todo.priority}}"></div>
+<h3 class="title-label">{{todo.title}}</h3>
+<input class="title hidden title-input" type="text" name="title" placeholder="What needs to be done ?" required autofocus>
+<div class="remove"></div>
+<select class="duedate" name="duedate">
+	<option value="0">overdue</option>
+	<option value="1">today</option>
+	<option value="2">tomorrow</option>
+	<option value="3">in 3 days</option>
+	<option value="4">in 4 days</option>
+	<option value="5">in 5 days</option>
+	<option value="6">in 6 days</option>
+	<option value="7">a week</option>
+	<option value="14">2 weeks</option>
+	<option value="30">a month</option>
+</select>

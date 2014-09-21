@@ -1,0 +1,27 @@
+<header component="navigation">
+	<h1>Things to do</h1>
+	<div class="session">
+		<a href="/#logout">logout</a> 
+	</div>
+</header>
+<div class="split"></div>
+<form action="" class="new-todo">
+	<div id="priority" class="importance" data-value="normal"></div>
+	<input id="title" class="title" type="text" name="title" placeholder="What needs to be done ?" required autofocus>
+	<select id="duedate" name="duedate">
+		<option value="1">today</option>
+		<option value="2">tomorrow</option>
+		<option value="3">in 3 days</option>
+		<option value="4">in 4 days</option>
+		<option value="5">in 5 days</option>
+		<option value="6">in 6 days</option>
+		<option value="7">a week</option>
+		<option value="14">2 weeks</option>
+		<option value="30">a month</option>
+	</select>
+	<input class="add" type="submit" value="+">
+</form>
+<section>
+	<p class="sort">Sort by: <a id="sortby-priority" href="#">priority</a> or <a id="sortby-duedate" href="">due date</a> </p>
+	<ul id="todos-list" class="todos"></ul>
+</section>
